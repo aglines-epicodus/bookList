@@ -1,0 +1,19 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+
+<h1>Hello Book?</h1>
+
+<!-- Notes:
+POST Method -> HomeModule.cs
+NAME property -> HomeModule.cs - Request.Form["NAME"] -->
+
+<form action="/bookList" method="post">
+  <label for="bookTitle">Book title: </label>
+  <input type="text" name="bookTitle" >
+
+  <label for="bookAuthor">Book author: </label>
+  <input type="text" name="bookAuthor" >
+
+  <button type="submit" name="button">Submit</button>
+</form>

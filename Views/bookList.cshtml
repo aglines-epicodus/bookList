@@ -1,0 +1,17 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<!-- Notes:
+Arrived from HomeModule.cs , ["/bookList"] with user data from index.cshtml
+Loops over @Model which is Razor code
+Runs GetTitle and GetAuthor methods from Book.cs
+Link goes back to root (index.cshtml) -->
+
+
+@foreach (var book in @Model)
+{
+  <h1>@book.GetTitle()</h1>
+  <h2>@book.GetAuthor()</h2>
+}
+<a href="/">Home</a>
